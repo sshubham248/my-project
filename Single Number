@@ -1,0 +1,23 @@
+LEETCODE PROBLEM :- Single Number
+
+Approaches:-
+1) Using Nested Loop, TC -> O(N*N)
+2) Using Sorting, TC -> O(NlogN)
+3) Using XOR, TC-> O(N)
+
+Instruction ?
+
+XOR will all cancel out the element which appear more than one element and there will be single element will be left out.
+
+////////////////////////////////////////////////
+
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int ans=0;
+        for (int i = 0; i < nums.size(); i ++) {
+            ans=ans^nums[i];
+            }
+            return ans;
+    }
+};
